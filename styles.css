@@ -557,6 +557,8 @@ button#close-modal:hover {
   flex: 1 1 100px;
   min-width: 300px;
   max-width: 500px;
+
+  position: relative;
 }
 
 .suitor {
@@ -572,6 +574,7 @@ button#close-modal:hover {
 }
 
 #suitor-img {
+  border: 5px solid var(--border);
   border-radius: 10px;
   flex-grow: 1;
   max-width:100%
@@ -596,6 +599,44 @@ button#close-modal:hover {
 }
 
 /*** Match Modal ***/
+#dating-modal {
+  display: none;   /* modal should be hidden by default*/
+  position: absolute;
+  z-index: 2;      /* modal appears above other elements */ 
+  
+  /* TODO: Make the modal fill the entire screen */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Add a semi-transparent background to shadow non-modal elements*/
+  background-color: rgba(0,0,0,0.4); /* 40% opacity black */
+  border-radius: 30px;
+
+  /* Flexbox settings for modal */
+  /* These won't apply until we update "display:" from "hidden" to "flex" in our JS */
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+
+.dm-container {
+    /* Change modal size and spacing here */
+    padding: 20px;
+
+    /* Optional: Use flexbox to customize .modal-item layout */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--text-color-dark)
+
+}
+
+.dm-container p {
+  font-family: "Nickainley", serif;
+  font-size: 500%;
+}
 
 
 
@@ -705,6 +746,16 @@ button#close-modal:hover {
 .dark-mode #local-shelters {
   border: 4px solid var(--border-dark);
   background-color: var(--tile-background-dark);
+}
+
+/* Dating App */
+.dark-mode .suitor  {
+  border-color: var(--border-dark);
+  background-color: var(--accent-color-dark);
+}
+
+.dark-mode #suitor-img  {
+  border-color: var(--border-dark);
 }
 
 /* Footer */

@@ -264,8 +264,33 @@ const changeProfile = (event) => {
     nameAge.textContent = `${suitorNames[suitorNum]}, ${suitorAges[suitorNum]}`;
     job.textContent = `${suitorJobs[suitorNum]}`;
     description.textContent = `${suitorBios[suitorNum]}`;
-    suitorNum = (suitorNum + 1) % 3;
+    suitorNum = (suitorNum + 1) % 5;
 }
 
-yesButton.addEventListener("click", changeProfile);
-noButton.addEventListener("click", changeProfile);
+const toggleDatingModal = () => {
+    var audio = new Audio('audio/cat-meow.mp3');
+    audio.play();
+
+    const modal = document.querySelector("#dating-modal");
+    
+    // Update modal display to flex
+    modal.style.display = "flex";
+
+    // Set modal timeout to 5 seconds
+    setTimeout(() => {
+        // Update modal display to none
+        modal.style.display = "none";
+        changeProfile();
+
+    }, 2500);
+}
+
+yesButton.addEventListener("click", toggleDatingModal);
+noButton.addEventListener("click", () => {
+    var audio = new Audio('audio/cat-fighting.mp3');
+    audio.play();
+
+    setTimeout(() => {
+        changeProfile();
+    }, 5000);
+});
