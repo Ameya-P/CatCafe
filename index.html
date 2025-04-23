@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- head
+
+        Purpose:
+        - Title used here shows up in the browser tab
+        - Link to the favicon (small image that appears in the browser tab)
+        - Link to the CSS file (used to style the webpage)
+        -->
+        <title>The Cozy Cat Café</title>
+        <link rel="stylesheet" href="reset.css" type="text/css">
+        <link rel="stylesheet" href="styles.css" type="text/css"> 
+        <link rel="icon" href="img/kitty.png">
+    </head>
+    
+    <body>
+    
+        <!-- navbar
+
+        Purpose:
+        - Navigation bar that allows users to jump to different sections of the webpage
+        - Also holds buttons for user settings (dark mode, reduce motion)
+
+        When To Modify:
+        - [ ] Project 5 (REQUIRED FEATURE) 
+        - [ ] Project 8 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        -->
+        <div class="navbar">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#local-shelters">Local Shelters</a></li>
+                <li><a href="#dating">Meet Our Cats</a></li>
+                <li><button id="theme-button">Toggle Dark Mode</button></li>
+                <li><button id="motion-button">Toggle Motion</button></li>
+            </ul>
+        </div>
+
+        <!-- headings
+
+        Purpose:
+        - Main header section of the webpage
+        - Contains the title, subtitle, image, and key buttons for the webpage
+
+        When To Modify:
+        - [ ] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 3 (REQUIRED FEATURE) 
+        - [ ] Project 4 (REQUIRED FEATURE) 
+        - [ ] Any time after
+        -->
+        <div class="header">
+            <div class="header-item">
+                <img id="header-img" src="img/kitty.png" height="128"/>
+            </div>
+
+            <div class="header-item">
+                <h1>The Cozy Cat Café</h1>
+                <h2 class="tagline">The purrfect blend of coffee, cozy vibes, and adorable cats!</h2>
+
+                <div class="buttons">
+                    <button>RSVP</button>
+                    <button>VOLUNTEER</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- about
+
+        Purpose:
+        - Section for general info about the event
+        - Contains a video, description, and key points about the event
+
+        When To Modify:
+        - [ ] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 2 (STRETCH FEATURE) 
+        - [ ] Project 4 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        --> 
+        <div id="about">
+            <div class="info">
+                <h2>About the Event</h2>
+                <p>Come join us for a purrfectly cozy day at our Cat Café Event!</p>
+                <p>Imagine sipping on adorable, cat-themed drinks while snuggling with the sweetest kitties looking for their forever homes. Whether you're a coffee lover, a cat enthusiast, or just in need of some cuddly comfort, this event has it all. Enjoy the purrs, play with the kittens, and maybe even meet your new best friend! Plus, every sip helps support our furry friends on their journey to find loving families.</p>
+                <p>It’s the purrfect way to spend your day—come for the cats, stay for the coffee, and leave with a heart full of love!</p>
+
+                <h3>🐾 What to Expect at The Cozy Cat Café! 🐾</h3>
+                <h4 class="tagline">Sip, Snuggle, and Support – The Purrfect Café Experience!</h4>
+                <ul>
+                    <li> <strong>Adorable Cats & Cuddles</strong> <em>– Meet, play, and snuggle with friendly, adoptable cats looking for their forever homes. Who knows? You might just meet your new best friend!</em></li>
+                    <li> <strong>Delicious Cat-Themed Drinks</strong> <em>– Enjoy a pawsome selection of coffee, tea, and specialty drinks with fun feline-inspired names like “Meow Matcha” and “Kitty Cappuccino.”</em></li>
+                    <li> <strong>Fun Activities & Giveaways</strong> <em>– Take cute photos in our feline photo booth, participate in raffles, and get creative with cat-themed crafts—all while supporting a great cause!</em></li>
+                </ul>
+            </div>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dgTyLa-C4gA?si=JRDIT6mddkks_mdR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- schedule
+
+        Purpose:
+        - Section for specific info about the event's schedule
+        - Contains images and descriptions of each activity
+
+        When To Modify:
+        - [ ] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 4 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        --> 
+        <div id="schedule">
+            <h2>Event Schedule</h2>
+
+            <div class="row1">
+                <div class="event1">
+                    <img alt="A latte with latte art" src="img/coffee-latte.png" height="256"/>
+                    <h3>10:00 AM – Doors Open & Morning Meow Mixer</h3>
+                    <p>Kick off the day with a fresh cup of coffee (or tea!) and meet the adorable cats roaming around. Get comfy, say hello, and start your morning with some fluffy cuddles!</p>
+                </div>
+    
+                <div class="event2">
+                    <img alt="Paper, scissors, and glue" src="img/paper-crafts.png" height="256"/>
+                    <h3>11:30 AM – Cat Craft Corner</h3>
+                    <p>Unleash your creative side! Decorate a cat toy or design a cute adoption sign to help our furry friends find their forever homes. Fun for all ages!</p>
+                </div>
+    
+                <div class="event3">
+                    <img alt="A matcha green tea drink with boba pearls" src="img/boba.png" height="256"/>
+                    <h3>1:00 PM – Paws & Sips Tasting Session</h3>
+                    <p>Try our purrfectly curated cat-themed drinks, from “Meow Matcha” to “Kitty Cappuccino.” Vote for your favorite and enter a raffle for a special café surprise!</p>
+                </div>
+            </div>
+
+            <div class="row2">
+                <div class="event4">
+                    <img alt="A camera with a photo peeking out of it" src="img/polaroid.png" height="256"/>
+                    <h3>3:00 PM – Feline Photo Booth</h3>
+                    <p>Strike a pose with our friendly felines! Take adorable pictures with cute props, and maybe even snap a selfie with your future furry bestie. Don’t forget to tag us!</p>
+                </div>
+    
+                <div class="event5">
+                    <img alt="A cat wearing a hat" src="img/cat.png" height="256"/>
+                    <h3>5:00 PM – Adoption Celebration & Closing Toast</h3>
+                    <p>Wrap up the day by celebrating the cats who found their forever homes! Hear heartwarming adoption stories, enjoy a final sip, and help us toast to a successful event.</p>
+                </div>
+    
+                <div class="event6">
+                    <img alt="A cat paw with a heart" src="img/pawprint.png" height="256"/>
+                    <h3>All Day</h3>
+                    <p>Check our live fundraising counter, browse the kitty dating profiles, and chat with volunteers about how you can get involved!</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- menu
+
+        Purpose:
+        - Contains drinks/food served + prices
+        --> 
+        <div id="menu">
+
+        </div>
+
+        <!-- meet the cats
+
+        Purpose:
+        - Contains cats that are available for adoption
+        --> 
+        <div id="meet-the-cats">
+
+        </div>
+
+        <!-- rsvp/volunteer sign-up
+
+        Purpose:
+        - Section for users to sign up for the event
+        - Contains a form for users to input their information, 
+        and a list of other users who have signed up
+
+        When To Modify:
+        - [ ] Project 6 (REQUIRED FEATURE) 
+        - [ ] Project 6 (STRETCH FEATURE) 
+        - [ ] Any time after
+        --> 
+        <div id="rsvp">
+            <h2 class="small">RSVP</h2>
+            <h2 class="large">Répondez S'il Vous Plaît</h2>
+
+            <div class="rsvp-container">
+                <div class="rsvp-para">
+                    <p>Spots are limited, so don’t miss your chance to experience the magic of The Cozy Cat Café! 
+                        RSVP today to secure your spot for a day filled with cuddles, coffee, and cuteness. 
+                        Whether you're hoping to adopt, unwind with a warm drink, or just soak up the cozy vibes, we can't wait to welcome you. 
+                        Your RSVP helps us prepare the purrfect experience—for both you and our feline friends!</p>
+                </div>
+                <div class="rsvp-participants">
+                    <p id="rsvp-count">☕ 3 people have RSVP'd to this event!</p>
+                    <p>🐱 Mr. Mistoffelees from California has RSVP'd.</p>
+                    <p>🐱 Grizabella from New York has RSVP'd.</p>
+                    <p>🐱 Skimbleshanks from Colorado has RSVP'd.</p>
+                </div>
+            </div>
+
+            <!--- Sign RSVP Form --->
+            <div class="form-container">
+                <form id="rsvp-form" title="rsvp-form">
+                    <!-- <label for="name">Name:</label> -->
+                    <input type="text" id="name" name="name" placeholder="Name">
+
+                    <!-- <label for="home-state">Home State:</label> -->
+                    <input type="text" id="home-state" name="home-state" placeholder="Home State">
+
+                    <!-- <label for="email">Email:</label> -->
+                    <input type="text" id="email" name="email" placeholder="Email">
+
+                    
+                </form>
+                <!-- Submit button -->
+                <button id="rsvp-button">Submit RSVP</button>
+            </div>      
+        </div>
+
+        <!-- success modal
+
+        Purpose:
+        - Modal that appears when a user successfully signs up for the event
+        - Contains a personalized message and image
+
+        When To Modify:
+        - [ ] Project 9 (REQUIRED FEATURE)
+        - [ ] Project 9 (STRETCH FEATURE) 
+        - [ ] Any time after
+        --> 
+
+        <div id="success-modal" class="modal">
+            <div class="modal-container">
+                <div class="modal-item">
+                    <h3>Paw-some news! 🐾</h3>
+                    <p id="modal-text">Thank mew so much for signing up to visit our cozy Cat Café — we’re feline overjoyed to welcome you into our purr-fect little family! 🐱☕ Whether you’re here for the cuddles, the coffee, or just a little pawsitivity, we can’t wait to share some meowgical moments with you.</p>
+                    <button id="close-modal">Close</button>
+                </div>
+                <div class="modal-item">
+                    <img id="stick" src="img/coffee_stick.png" height="256"/>
+                    <img id="barista" src="img/cat_barista.png" height="256"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- links
+
+        Purpose:
+        - Links to other resources related to the event
+
+        When To Modify:
+        - [ ] Project 2 (STRETCH FEATURE) 
+        - [ ] Project 4 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        --> 
+        <div id="local-shelters">
+            <h2>Local Animal Shelters</h2>
+
+            <a class="link1" href="https://minicattown.org/">
+                <article>
+                    <h3>Mini Cat Town</h3>
+                    <p>Mini Cat Town is a nonprofit kitten rescue dedicated to saving neonatal kittens and giving them a safe, loving place to grow until they’re ready for their forever homes. With their adorable kitten lounge, they provide a cozy space where visitors can play, cuddle, and even adopt these sweet fur babies — all while helping support rescue efforts and saving more tiny lives!</p>
+                </article>
+            </a>
+
+            <a class="link2" href="https://www.thedancingcat.org/">
+                <article>
+                    <h3>The Dancing Cat</h3>
+                    <p>The Dancing Cat is a cozy cat adoption lounge and creative space where people can hang out with adorable, adoptable cats in a relaxed, homey environment. Their mission is to help rescue cats find loving forever homes while creating a welcoming community space filled with art, events, and, of course, plenty of purrs!</p>
+                </article>
+            </a>
+
+            <a class="link3" href="https://www.13thstcats.org/">
+                <article>
+                    <h3>13th Street Cat Rescue</h3>
+                    <p>13th Street Cat Rescue is a volunteer-run nonprofit dedicated to rescuing, rehabilitating, and finding loving homes for stray and abandoned cats in the San Jose area. They focus on TNR (Trap-Neuter-Return) efforts, providing medical care, and matching cats with their purrfect families — all driven by a love for cats and a commitment to their wellbeing.</p>
+                </article>
+            </a>
+        </div>
+
+        <!-- Dating Profile -->
+         <div id="dating">
+            <div id="dating-modal">
+                <div class="dm-container">
+                    <div id="dm-item">
+                        <h1>♡</h1>
+                    </div>
+                    <div id="dm-item">
+                        <p>It's a Match!</p>
+                    </div>
+                </div>
+            </div>
+
+            <h1>Meet Our Cats</h1>
+            <div class="suitors">
+                <div class="suitor">
+                    <img id="suitor-img" src="img/suitors/cat1.jpg" height="256">
+                    <div id="bio">
+                        <h3 id="name-age">Mr. Whiskers, 7</h3>
+                        <em id="job">📚 Bookstore Security Officer</em>
+                        <p id="description">Professional napper. Will judge you from the bookshelf. (Definitely 47 in cat years.)</p>
+                    </div>
+                    <div id="swipe-controls">
+                        <img id="no" src="img/swipe-controls/no.png" height="64">
+                        <img id="yes" src="img/swipe-controls/yes.png" height="64">
+                    </div>
+                </div>
+             </div>
+         </div>
+            
+        <!-- footer -->
+        <div class="footer">
+            <a href="venmo.com/CozyCatCafe">Donate</a>
+            <span> / </span>
+            <a href="mailto:hello@cozycatcafe.com">Contact Us</a>
+         </div>
+
+        <!-- script -->
+        <script src="index.js"></script>
+         
+    </body>
+</html>

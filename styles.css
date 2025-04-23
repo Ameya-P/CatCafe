@@ -1,0 +1,789 @@
+/*** 
+  ################################
+  ||   VSCodeEDU Preview Fix    ||
+  ################################
+                                                 
+  Purpose:
+  - Fix VSCodeEDU issue that causes a white border to show around
+    the preview window
+***/
+html {
+    background: url("img/ep_naturalwhite.webp"), var(--bg-color);
+    background-blend-mode: multiply;
+}
+
+/*** 
+  ################################
+  ||            Body            ||
+  ################################
+
+  Purpose:
+  - Add style rules for the body of your webpage
+  - This is useful if you want a rule to apply to EVERYTHING on your page
+    - (Tip: You can always override these rules later in the stylesheet)
+***/
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    font-size: 16px;
+    color: var(--text-color);
+
+    font-family: "Futura Medium", sans-serif;
+    line-height: 1.2;
+    
+    margin: 30px 10px;
+    padding: 20px;
+}
+
+/*** 
+  ################################
+  ||            Text            ||
+  ################################
+
+  Purpose: 
+  - Add style rules for headings (h1-6),
+    paragraphs (p), links (a), and buttons
+***/
+
+h1 {
+    font-family: "Nickainley", serif;
+    font-size: 5rem;
+}
+
+h2 {
+    font-family: "Nickainley", serif;
+    font-size: 4rem;
+    padding: 10px;
+}
+
+h3, h4, h5, h6, strong {
+    font-family: "Futura Bold", sans-serif;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+.tagline {
+    font-family: "Futura Italic", sans-serif;
+    font-size: 1.7rem;
+}
+
+h4.tagline {
+    font-size: 1.3rem;
+}
+
+em {
+  font-family: "Futura Italic", sans-serif;
+}
+
+/** ------- Links ------- **/
+a:link {
+    color: var(--accent-color-dark);
+    text-decoration: none;
+
+}
+
+a:visited {
+    color: var(--accent-color-darkest);
+
+}
+
+a:hover {
+    color: var(--accent-color-light);
+}
+
+a:active {
+  color: var(--accent-color-medium);
+}
+
+/** ------------- SPECIAL ------------- **/
+img {
+    width: 100%;
+    min-width: 100px;
+    max-width: 200px;
+    height: auto;
+}
+
+/** iFRAME **/
+iframe {
+    border: 4px solid #3c2b28;
+    border-radius: 20px;
+}
+
+/** BUTTONS **/
+button {
+    font-family: "Futura Bold", sans-serif;
+    font-size: 20px;
+    color: var(--text-color);
+    background: var(--button-bg);
+
+    padding: 20px;
+    border: 3px solid;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+button:hover {
+  background: var(--header);
+}
+
+/*** 
+  ################################
+  ||           Header           ||
+  ################################
+
+  Purpose:
+  - Add style rules for your website's header section
+***/
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    border: 4px solid var(--border);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.header-item:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.buttons {
+  display: flex;
+}
+/***
+  ################################
+  ||           Footer           ||
+  ################################
+
+  Purpose:
+  - Add style rules for your website's footer section
+***/
+
+.footer { /* Example B: This styles elements with class="footer" */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: var(--footer);
+
+    padding: 10px;
+}
+
+.footer a {
+  color: var(--text-color);
+}
+
+.footer a:hover {
+  color: var(--accent-color-medium);
+}
+
+/*** 
+  ################################
+  ||  Navigation bar (navbar)   ||
+  ################################
+  
+  Purpose:
+  - Add style rules for your website's navbar
+***/
+
+.navbar ul {
+    z-index: 1000; /* Ensures the navbar is on top of other elements */
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 40px;
+    background: var(--header);
+
+    display: flex;
+    align-items: center;
+  
+}
+
+.navbar ul li {
+    float: left;
+    margin: 10px;
+}
+
+.navbar ul li a {
+    color: var(--text-color);
+}
+
+.navbar ul li a:hover {
+    color: var(--accent-color-light);
+}
+
+.navbar button {
+    font-family: "Futura Medium", sans-serif;
+    font-size: 16px;
+
+    margin: 0px;
+    padding: 7.5px;
+    border: none;
+
+    background-color: var(--header-dark);
+    color: var(--text-color-dark);
+}
+
+.navbar button:hover {
+    background-color: var(--header);
+    color: var(--text-color);
+}
+
+/***
+  ################################
+  ||       About Section        ||
+  ################################
+
+  Purpose:
+  - Add style rules for your website's About section
+***/
+
+#about {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 30px;
+}
+
+#about > * { /* All direct children of about*/
+    flex: 1;
+}
+
+.info:nth-of-type(1) > :first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.info:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+      flex-direction: column;
+    }
+}
+/***
+  ################################
+  ||      Schedule Section      ||
+  ################################
+
+  Purpose:
+  - Add style rules for your website's Schedule section
+***/
+
+#schedule {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+
+    padding: 30px;
+}
+
+#schedule > :first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+div[class^="row"] {
+    display: flex;
+    gap: 1rem;
+}
+
+div[class^="event"] {
+    flex: 1;
+
+    border: 4px solid var(--border);
+    border-radius: 10px;
+    padding: 30px;
+
+    background-color: var(--tile-background);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+
+    text-align: center;
+}
+
+/***
+  ################################
+  ||       Links Section        ||
+  ################################
+
+  Purpose:
+  - Add style rules for your website's Links section
+***/
+#local-shelters {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    border: 4px solid var(--border);
+    border-radius: 10px;
+    padding: 30px;
+
+    background-color: var(--tile-background);
+}
+
+#local-shelters > :first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+/***
+  ################################
+  ||            RSVP            ||
+  ################################
+
+  Purpose:
+  - Add style rules for your website's RSVP form
+
+  When To Modify:
+  - [ ] Project 6 (REQUIRED FEATURE)
+  - [ ] Project 7 (REQUIRED FEATURE)
+  - [ ] Any time after
+***/
+#rsvp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        padding: 30px;
+    }
+
+    .large {
+        display: none;
+        text-align: center;
+    }
+}
+
+@media (min-width: 650px) {
+  #rsvp .small {
+      display: none;
+  }
+  #rsvp .large {
+      display: block;
+  }
+}
+
+.rsvp-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 1200px;
+    padding-bottom: 10px; 
+}
+
+.rsvp-para {
+    width: 65%;
+    padding-right: 10px;
+}
+
+.rsvp-participants {
+    width: 35%;
+    padding-right: 10px;
+}
+
+.form-container {
+    display: flex;
+    width: 100%;
+    /* flex-flow: row wrap; */
+    justify-content: center;
+    align-items: center;
+
+    /*gap: 10px;*/
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#name {
+  flex: 1;
+}
+
+#home-state {
+  flex: 1;
+}
+
+#email {
+    flex: 2
+}
+
+input {
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    background: var(--text-color-dark);
+}
+
+::placeholder {
+  font-family: "Futura Medium", sans-serif;
+  text-align: center;
+  font-size: medium;
+  color: var(--header);
+}
+
+/* RSVP ERRORS */
+.error {
+    border: 2px solid var(--accent-color-medium);
+    background: var(--error-color);
+
+  /* Set border-color and background */
+}
+
+
+/*** Animations [PLACEHOLDER] [ADDED IN UNIT 8] ***/
+
+/*** Success Modal [PLACEHOLDER] [ADDED IN UNIT 9] ***/
+/*** Success Modal  ***
+  
+  Purpose:
+  - Add style rules to your website's pop-up modal, which appears
+    when a user successfully submits the RSVP form
+
+  When To Modify:
+  - [ ] Project 9 (REQUIRED FEATURE)
+  - [ ] Any time after
+***/
+
+.modal {
+  display: none;   /* modal should be hidden by default*/
+  position: fixed; /* modal cannot move around the screen */
+  z-index: 2;      /* modal appears above other elements */ 
+  
+  /* TODO: Make the modal fill the entire screen */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Add a semi-transparent background to shadow non-modal elements*/
+  background-color: rgba(0,0,0,0.4); /* 40% opacity black */
+
+  /* Flexbox settings for modal */
+  /* These won't apply until we update "display:" from "hidden" to "flex" in our JS */
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container {
+    /* Change modal size and spacing here */
+    padding: 50px;
+    width: 55%;
+
+    /* Customize modal style here */
+    background-color: var(--header);
+    border: solid 5px var(--header-dark);
+    border-radius: 15px;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 1rem;
+    line-height: 130%;
+    font-family: "Futura Medium";
+
+    /* Optional: Use flexbox to customize .modal-item layout */
+    display: flex;
+    gap: 30px;
+
+}
+
+.modal-item:first-child {
+  flex: 1 1 300px;
+    /* Optional: Style individual elements within the modal */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.modal-item:last-child {
+  flex: 0 0 100px;
+  /* Optional: Style individual elements within the modal */
+}
+
+button#close-modal:hover {
+  background-color: var(--accent-color-dark);
+}
+
+/***
+################################
+||         Dating App         ||
+################################
+***/
+#dating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.suitors {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  text-align: start;
+
+  flex: 1 1 100px;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.suitor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  border: 5px solid var(--border);
+  border-radius: 30px;
+  background-color: var(--button-bg);
+  padding: 20px;
+}
+
+#suitor-img {
+  border-radius: 10px;
+  flex-grow: 1;
+  max-width:100%
+
+}
+
+#bio {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#swipe-controls {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-around;
+}
+
+#swipe-controls * {
+  flex: 0 0 32px;
+}
+
+/*** Match Modal ***/
+
+
+
+/*** 
+################################
+||         Dark Mode          ||
+################################
+ ***/
+
+/* Default dark mode style */
+.dark-mode {
+    background: url("img/ep_naturalwhite.webp"), var(--bg-color-dark);
+    background-blend-mode: multiply;
+    color: var(--text-color-dark);
+}
+
+.dark-mode body {
+    color: var(--text-color-dark);
+}
+
+/* Text */
+.dark-mode { 
+    h1, h2, h4, h5, h6, 
+    strong, em,
+    span,  
+    .tagline {
+        color: var(--text-color-dark);
+    }
+}
+
+/** Links **/
+.dark-mode {
+    a:link {
+      color: var(--link);
+    }
+
+    a:visited {
+      color: var(--link-visited);
+    }
+
+    a:hover {
+      color: var(--link-hover);
+    }
+
+    a:active {
+      color: var(--link-active);
+      }
+}
+
+/* NavBar */
+.dark-mode .navbar ul {
+    background: var(--header-dark);
+}
+
+.dark-mode ul li a:link {
+  color: var(--text-color-dark);
+}
+
+.dark-mode ul li a:hover {
+  color: var(--accent-color-lightest);
+}
+
+.dark-mode {
+    .navbar button {
+        border: none;
+        background-color: var(--header);
+        color: var(--text-color);
+    }
+
+    .navbar button:hover {
+        background-color: var(--header-dark);
+        color: var(--text-color-dark);
+    }
+}
+
+/* Header */
+.dark-mode .header {
+    border: 4px solid var(--border-dark);
+    background-color: var(--tile-background-dark);
+}
+
+/* Button */
+.dark-mode {
+  button {
+      background: var(--button-bg-dark);
+      border: 4px solid var(--border-dark);
+      color: var(--text-color-dark);
+  }
+
+  button:hover {
+      background: var(--header-dark);
+  }
+}
+
+/** iFRAME **/
+.dark-mode iframe {
+  border: 4px solid var(--border-dark);
+}
+
+/* Schedule */
+.dark-mode div[class^="event"] {
+  border: 4px solid var(--border-dark);
+  background-color: var(--tile-background-dark);
+}
+
+/* Local Shelters */
+.dark-mode #local-shelters {
+  border: 4px solid var(--border-dark);
+  background-color: var(--tile-background-dark);
+}
+
+/* Footer */
+.dark-mode .footer { 
+    background: var(--footer-dark);
+}
+
+.dark-mode .footer a {
+    color: var(--text-color-dark);
+}
+
+.dark-mode .footer a:hover {
+  color: var(--accent-color-medium);
+}
+
+/***
+  ################################
+  ||  Custom Colors and Fonts   ||
+  ################################
+
+  Purpose:
+  - Use CSS variables to define custom colors for your website
+  - To get you started, we've provided the color scheme used in our example site.
+  - To reference a color variable in your css, use var(--variable-name) in place of a color value
+***/
+
+:root {
+    /* Light Mode */
+    --bg-color: linear-gradient(#fffbf7, #fcefe6);
+    --border: #3c2b28;
+    --text-color: #3c2b28;
+    --tile-background: rgba(192, 207, 178,0.5);
+    --header: #abbb96;
+    --footer: #987d62;
+    --button-bg: #fcf7f1;
+
+    /* Accent Colors */
+    --accent-color-lightest:rgb(249, 96, 139);
+    --accent-color-light: #DC416C;
+    --accent-color-medium: #B41836;
+    --accent-color-dark: #AA6EA2;
+    --accent-color-darkest: #9170A9;
+
+    /* Dark Mode */
+    --bg-color-dark: linear-gradient(rgb(70, 47, 68), rgb(112, 76, 112));
+    --border-dark: #fcf7f1;
+    --text-color-dark: #fcf7f1;
+    --tile-background-dark: rgba(182, 139, 200, 0.2);
+    --header-dark: #667C4E;
+    --footer-dark: rgb(57, 41, 57);
+    --button-bg-dark: rgb(171, 193, 128);
+
+    /* Dark Mode Link */
+    --link:rgb(155, 184, 100);
+    --link-visited: rgb(124, 148, 79);
+    --link-hover: #DC416C;
+    --link-active: #B41836;
+
+    /* Error Colors */
+    --error-color: #fba7bf;
+}
+
+/** ------------- FONTS ------------- **/
+@font-face {
+  font-family: "Nickainley";
+  src: url('fonts/Nickainley-Normal.otf') format('opentype')
+}
+
+@font-face {
+  font-family: "Futura Medium";
+  src: url('fonts/Futura Bk BT Book.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: "Futura Bold";
+  src: url('fonts/Futura Md BT Medium.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: "Futura Italic";
+  src: url('fonts/Futura Bk BT Book Italic.ttf') format('truetype')
+}
