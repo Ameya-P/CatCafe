@@ -145,11 +145,14 @@ const validateForm = (event) => {
 
 let animation = true;
 const motionButton = document.querySelector("#motion-button")
+const motionStatus = document.querySelector('#motion-status')
 const reduceMotion = (event) => {
     if (animation) {
         animation = false;
+        motionStatus.textContent = "Motion: Off";
     } else {
         animation = true;
+        motionStatus.textContent = "Motion: On";
     }
 }
 
