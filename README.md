@@ -43,7 +43,7 @@ Sound effects play based on your choice.
 * Custom CSS Animation for the modal cat
 
 ## 📸 Demo
-[[My Website](https://github.com/Ameya-P/CatCafe/blob/90c22c54296154b4cbe136a3986a9d397a80e9ec/img/demo.png)]
+![My Website](https://github.com/Ameya-P/CatCafe/blob/90c22c54296154b4cbe136a3986a9d397a80e9ec/img/demo.png)
 
 ## 🐱 Inspiration
 This project was built as a creative and fun way to explore DOM manipulation, CSS animations, and responsive design — all while showing some love for our feline friends!
